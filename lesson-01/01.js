@@ -10,4 +10,4 @@ while (
     sum += i; i++;
 }
 
-console.log(sum);
+console.log
