@@ -7,9 +7,9 @@
 * Для успешного прохождения тестов не меняйте названия переменных!
 */
 
-let dice1 = [0,1,2,3,4,5] // your code
-let dice2 = [0,1,2,3,4,5] // your code
-let isWinningDouble = true // your code
+let dice1  // your code
+let dice2   // your code
+let isWinningDouble  // your code
 
 /*
 console.log('Первый бросок: ' + dice1)
