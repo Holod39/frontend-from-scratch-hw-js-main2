@@ -6,4 +6,6 @@
 
 const score = 70 // тестовое значение, можно изменять
 let grade
+score = Math.floor(Math.random()*100)+1;
+if (score = [0-49]) {grade = F}
 // your code
