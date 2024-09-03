@@ -6,6 +6,16 @@
 
 const score = 70 // тестовое значение, можно изменять
 let grade
-score = Math.floor(Math.random()*100)+1;
-if (score = [0-49]) {grade = F}
+if (score >= 0 && score < 50) {
+    grade = 'F';
+} else (score >= 50 && score < 69){
+    grade = 'D';
+} if (score >=70 && score < 79) {
+    grade = 'C'
+}else if (score >= 80 && score < 89){
+grade = 'B'
+} else if (score >= 90 && score < 100){
+    grade = 'A'
+}
+
 // your code
