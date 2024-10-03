@@ -15,5 +15,20 @@ const game = {
     gold: 250,
     lumber: 100,
   },
-  addResource() {}
+  addResource(resource, amount) {
+    // Проверяем, существует ли указанный тип ресурса
+    if (this.resources.hasOwnProperty(resource)) {
+      // Проверяем, является ли amount положительным числом
+      if (typeof amount === 'number' && amount > 0) {
+        // Добавляем количество ресурса
+        this.resources[resource] += amount;
+      } else {
+        console.log("Amount must be a positive number");
+      }
+    } else {
+      console.log("Invalid resource");
+    }
+  }
 }
+
+
