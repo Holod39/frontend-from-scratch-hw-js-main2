@@ -14,8 +14,8 @@
 
 function doubleEachCharacter(str) {
     let result = [];
-    for (let char of str) {
-        result += char.repeat(2);
+    for (let i = 0; i < str.length; i++) {
+        result.push(str[i], str[i]); // Добавляем каждый символ дважды
     }
-   return result;
+    return result.join(''); // Объединяем массив в строку
 }
