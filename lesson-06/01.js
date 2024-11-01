@@ -17,3 +17,36 @@ const WEB_TECH_IMAGES = [
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/c8a1f4a6-1337-4899-bdfd-a8c9c7bb806a_css-magic-logo.jpg',
   'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ]
+// Переменная для хранения текущего индекса изображений
+let currentIndex = 0;
+
+// Получаем элементы кнопок и изображения
+const imageElement = document.querySelector('img'); // Предположим, что <img> находится в секции "Урок 6"
+const prevButton = document.getElementById('prev'); // Кнопка "prev"
+const nextButton = document.getElementById('next'); // Кнопка "next"
+
+// Функция для обновления изображения
+function updateImage() {
+    imageElement.src = WEB_TECH_IMAGES[currentIndex];
+}
+
+// Обработчик для кнопки "prev"
+prevButton.addEventListener('click', () => {
+    currentIndex--; // Уменьшаем индекс
+    if (currentIndex < 0) {
+        currentIndex = WEB_TECH_IMAGES.length - 1; // Если индекс меньше 0, переходим к последнему изображению
+    }
+    updateImage(); // Обновляем отображаемое изображение
+});
+
+// Обработчик для кнопки "next"
+nextButton.addEventListener('click', () => {
+    currentIndex++; // Увеличиваем индекс
+    if (currentIndex >= WEB_TECH_IMAGES.length) {
+        currentIndex = 0; // Если индекс больше или равен длине массива, переходим на первое изображение
+    }
+    updateImage(); // Обновляем отображаемое изображение
+});
+
+// Первоначальная установка первого изображения
+updateImage();
