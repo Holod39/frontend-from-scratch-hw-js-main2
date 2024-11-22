@@ -3,7 +3,7 @@
  * Если строка является числом, функция должна возвращать true, в противном случае - false.
  */
 
-function isNumeric(str) {
+function isNumeric(value) {
   const regex = /^-?\d+(\.\d+)?$/;
     return regex.test(value);// your code
 }
