@@ -3,9 +3,9 @@
  * Если строка является числом, функция должна возвращать true, в противном случае - false.
  */
 
-function isNumeric(value) {
-  const regex = /^-?\d+(\.\d+)?$/;
-    return regex.test(value);// your code
+function isNumeric(str) {
+  const num = Number(str);
+  return !isNaN (num)// your code
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
