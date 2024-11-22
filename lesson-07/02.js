@@ -4,7 +4,8 @@
  */
 
 function isNumeric(str) {
-  // your code
+  const regex = /^-?\d+(\.\d+)?$/;
+    return regex.test(value);// your code
 }
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
